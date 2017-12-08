@@ -1,7 +1,7 @@
-# This version of our game represents the most basic implementation of number guessing.
-# The player only gets 1 guess
+# This version of our game introduces the concept of looping thereby giving the player infinite guesses
+# Notice we have also 'introduced' code repetition...something we will deal with in the next version
 
-import os	# import os class to allow for clearing of terminal screen
+import os	#import os class to allow for clearing of terminal screen
 import random
 
 os.system('clear')
@@ -14,9 +14,12 @@ print(num)
 
 guess = int(input("Let's go! Your guess? \n"))
 
-if(guess < num):
-	print("Too low!")
-elif(guess > num):
-	print("Too high")
-else:
-	print("Correct!")
+while(guess != num):
+	if(guess < num):
+		print("Too low")
+	elif(guess > num):
+		print("Too high")
+	
+	guess = int(input("Let's go! Your guess? \n"))
+
+print("Correct!")

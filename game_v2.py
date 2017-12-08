@@ -1,5 +1,4 @@
-# This version of our game introduces the concept of looping thereby giving the player infinite guesses
-# Notice we have also 'introduced' code repetition...something we will deal with in the next version
+# This version of the game introduces setting up an infinite loop and breaking upon condition to eliminate code repetition and achieve a more professional final result
 
 import os	#import os class to allow for clearing of terminal screen
 import random
@@ -12,14 +11,14 @@ max = int(input("Please input the max number for this game: "))
 num = random.randint(0, max)
 print(num)
 
-guess = int(input("Let's go! Your guess? \n"))
-
-while(guess != num):
-	if(guess < num):
-		print("Too low")
-	elif(guess > num):
-		print("Too high")
-	
+while True:
 	guess = int(input("Let's go! Your guess? \n"))
+
+	if(guess > num):
+		print("Too high")
+	elif(guess < num):
+		print("Too low")
+	else:
+		break
 
 print("Correct!")
