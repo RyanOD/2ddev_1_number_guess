@@ -9,7 +9,6 @@ print("Welcome to the number guessing game!\n")
 max = int(input("Please input the max number for this game: "))
 
 num = random.randint(0, max)
-print(num)
 
 while True:
 	guess = int(input("Let's go! Your guess? \n"))

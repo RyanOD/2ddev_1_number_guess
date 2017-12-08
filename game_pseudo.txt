@@ -1,0 +1,9 @@
+welcome player to the game
+prompt user for maximum number
+generate a random number between 0 and the maximum number entered
+start infinite while loop
+	prompt user for guess
+	if greater than secret number, print "too high"
+	else if less than secret number, print "too low"
+	else end program
+loop ended, congratulate player for winning
